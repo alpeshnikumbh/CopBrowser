@@ -1,0 +1,207 @@
+/* Margins */
+.ml-10 {
+  margin-left: 10px !important;
+}
+
+.ml-20 {
+  margin-left: 20px !important;
+}
+
+.ml-30 {
+  margin-left: 30px !important;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.mr-20 {
+  margin-right: 20px !important;
+}
+
+.mr-30 {
+  margin-right: 30px !important;
+}
+
+/* Paddings */
+.p-10 {
+  padding: 10px !important;
+}
+
+.p-20 {
+  padding: 20px !important;
+}
+
+.p-30 {
+  padding: 30px !important;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+.modal {
+  color: white;
+  border-radius: 10px;
+}
+
+.modal-header {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.modal-header {
+  background-color: #161620;
+}
+
+.modal-content {
+  border-radius: 25px;
+  border-color: #161620;
+}
+
+#editModal .modal-body,
+#editAllModal .modal-body,
+#customLinkModal .modal-body,
+#addProxyModal .modal-body,
+#addAccountModal .modal-body {
+  height: 480px;
+  padding: 35px 35px 0px 35px;
+  border: 10px solid #161620;
+  border-radius: 0px 0px 15px 15px;
+  background-color: #20202b !important;
+}
+
+#editAllModal .modal-body {
+  height: 310px;
+}
+
+#customLinkModal .modal-body {
+  height: 220px;
+}
+
+#addProxyModal .modal-body,
+#addAccountModal .modal-body {
+  height: 450px;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  background-color: #161620 !important;
+  border: 0px !important;
+  color: white !important;
+  border-radius: 15px !important;
+}
+
+.modal textarea {
+  width: 100%;
+  height: 300px;
+  resize: none;
+  padding: 25px 20px 20px 35px;
+}
+
+/* Modal TextArea Scrollbar */
+/*
+ *  Proxy List Panel Scrollbar
+ */
+
+.modal textarea::-webkit-scrollbar-track {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal textarea::-webkit-scrollbar {
+  width: 7px;
+}
+
+.center-logo {
+  position: relative;
+  margin: auto;
+  left: 50%;
+}
+
+.modal textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #1dc4c4;
+}
+
+#activationForm input {
+  background-color: #20202b !important;
+  border: 1px solid #a9a9b1;
+  color: white !important;
+  border-radius: 15px;
+}
+
+.main-logo {
+  position: absolute;
+  width: 250px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+[class*="loader-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: inherit;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.loader-03 {
+  position: absolute;
+  border: 5px solid #00ff0b;
+  border-left-width: 3px !important;
+  border-right-width: 3px !important;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  -webkit-animation: 700ms loader-03 linear infinite;
+  animation: 700ms loader-03 linear infinite;
+}
+
+@-webkit-keyframes loader-03 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-03 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  border-radius: 12px !important;
+  font-weight: bold;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}

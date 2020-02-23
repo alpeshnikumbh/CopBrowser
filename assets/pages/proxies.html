@@ -1,0 +1,67 @@
+<!-- Nav pills -->
+<div class="" style="width: 100%;margin-top: 100px;" id="proxyPanel">
+  <div style="display:flex;">
+    <ul class="nav option-tab nav-justified" style="width: 52%;margin: auto;">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          data-toggle="pill"
+          id="browserSpooferProxyTab"
+        >
+          <div class="navbar-tab">Browser Spoofer</div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" id="yeezySupplyProxyTab">
+          <div>Yeezy Supply</div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" id="adidasProxyTab">
+          <div>Adidas</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Nav pills End -->
+
+<div class="row" style="margin-top: 50px;">
+  <div class="col-lg-8 col-md-10 col-sm-12 offset-lg-2 offset-md-1 offset-sm-0">
+    <form class="form" id="proxiesForm">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 proxy_panel_buttons">
+          <button
+            class="btn btn-outline-success button-global"
+            type="button"
+            id="add_proxy"
+            style="margin-top: 20px;"
+          >
+            ADD PROXIES
+          </button>
+          <button
+            class="btn btn-outline-danger button-global"
+            type="button"
+            id="delete_all_proxy"
+            style="margin-top: 20px;"
+          >
+            DELETE ALL
+          </button>
+          <button
+            class="btn btn-outline-success button-global"
+            type="button"
+            id="import_proxy"
+            style="margin-top: 20px;"
+          >
+            IMPORT
+          </button>
+          <input type="file" id="proxyImport" style="display: none;" />
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <div class="card proxy-list-panel"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="proxy-modals"></div>

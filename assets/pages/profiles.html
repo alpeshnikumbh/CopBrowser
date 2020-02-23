@@ -1,0 +1,502 @@
+<!-- Nav pills -->
+<div class="" style="width: 100%;margin-top: -15px;" id="profilePanel">
+  <div style="display:flex;">
+    <ul class="nav option-tab nav-justified" style="width: 55%;margin: auto;">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          data-toggle="pill"
+          href="#createProfiles"
+          id="createProfilesTab"
+        >
+          <div class="navbar-tab">Create Profiles</div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-toggle="pill"
+          href="#allProfiles"
+          id="profilesTab"
+        >
+          <div>Profiles</div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-toggle="pill"
+          href="#nikeAccount"
+          id="nikeAccountTab"
+        >
+          <div>Nike Accounts</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Nav pills End -->
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane container active" id="createProfiles">
+    <div class="row">
+      <div
+        class="col-lg-6 col-md-8 col-sm-10 offset-lg-3 offset-md-2
+      offset-sm-1"
+      >
+        <input type="text" id="profileId" value="" style="display:none;" />
+        <form class="form" id="createProfileForm">
+          <div class="row">
+            <div
+              class="col-lg-8 col-md-8 col-sm-8 offset-lg-3 offset-md-3 offset-sm-3"
+            >
+              <div class="create-profile-header text-center">
+                <span>Create Profiles <img src="./images/logo.png"/></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <h5>Shipping Info:</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="profileName"
+                  class="form-control"
+                  placeholder="Profile Name"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="firstName"
+                  class="form-control"
+                  placeholder="First Name"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="lastName"
+                  class="form-control"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="email"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  class="form-control"
+                  placeholder="Phone Number"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="address"
+                  class="form-control"
+                  placeholder="Address"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="postalCode"
+                  class="form-control"
+                  placeholder="Postal Code"
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="city"
+                  class="form-control"
+                  placeholder="City"
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="state"
+                  class="form-control"
+                  placeholder="State"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <h5>Billing Info:</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="creditCardNumber"
+                  class="form-control"
+                  placeholder="Credit Card Number"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="expireTime"
+                  class="form-control"
+                  placeholder="MM/YY"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="ccv"
+                  class="form-control"
+                  placeholder="CCV"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: -10px;">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+              <button
+                class="btn btn-outline-success button-global"
+                style="width: 100px;"
+                id="saveProfiles"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane container fade" id="allProfiles">
+    <div class="row">
+      <div
+        class="col-lg-8 col-md-10 col-sm-12 offset-lg-2 offset-md-1 offset-sm-0"
+        style="display: inline-flex;"
+      >
+        <div class="profile-panel-color">
+          <div class="card profiles-panel">
+            <div class="card-header" style="margin-top: 0px;">
+              <div class="row">
+                <div
+                  class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 text-center"
+                >
+                  <div class="create-profile-header text-center">
+                    <span>Profiles <img src="./images/logo.png"/></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-body profiles-panel-records-parent"
+              style="border-radius: 0px 0px 0px 10px !important;"
+            >
+              <div class="card profiles-panel-records"></div>
+            </div>
+          </div>
+          <div class="row" class="import-export-panel">
+            <div
+              class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 text-center"
+            >
+              <button
+                class="btn btn-outline-success button-global"
+                style="width: 80px;"
+                id="importFileProfile"
+              >
+                Import
+                <!-- <i class="fa fa-download" aria-hidden="true"></i> -->
+              </button>
+              <button
+                class="btn btn-outline-info button-global"
+                style="width: 80px;margin-left: 10px;"
+                id="exportFileProfile"
+              >
+                Export
+                <!-- <i class="fa fa-upload" aria-hidden="true"></i> -->
+              </button>
+            </div>
+            <div
+              class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 text-center"
+              style="margin-top: 5px;"
+            >
+              <button
+                class="btn btn-outline-danger button-global"
+                style="width: 120px;"
+                id="deleteAllProfile"
+              >
+                Delete All
+                <!-- <i class="fa fa-download" aria-hidden="true"></i> -->
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <form class="form" id="updateProfileForm">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <h5>Shipping Info:</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_profileName"
+                    class="form-control"
+                    placeholder="Profile Name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_firstName"
+                    class="form-control"
+                    placeholder="First Name"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_lastName"
+                    class="form-control"
+                    placeholder="Last Name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_phoneNumber"
+                    class="form-control"
+                    placeholder="Phone Number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_address"
+                    class="form-control"
+                    placeholder="Address"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_postalCode"
+                    class="form-control"
+                    placeholder="Postal Code"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_city"
+                    class="form-control"
+                    placeholder="City"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_state"
+                    class="form-control"
+                    placeholder="State"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <h5>Billing Info:</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_creditCardNumber"
+                    class="form-control"
+                    placeholder="Credit Card Number"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_expireTime"
+                    class="form-control"
+                    placeholder="MM/YY"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="up_ccv"
+                    class="form-control"
+                    placeholder="CCV"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <button
+                  class="btn btn-outline-success button-global"
+                  style="width: 100px;"
+                  id="updateProfiles"
+                >
+                  Update
+                </button>
+                <button
+                  class="btn btn-outline-danger button-global"
+                  style="width: 100px;margin-left: 20px;"
+                  id="deleteProfile"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane container fade" id="nikeAccount">
+    <div class="row" style="margin-top: 50px;">
+      <div
+        class="col-lg-8 col-md-10 col-sm-12 offset-lg-2 offset-md-1 offset-sm-0"
+      >
+        <form class="form" id="nikeAccountForm">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 profile_panel_nike_buttons">
+              <button
+                class="btn btn-outline-success button-global"
+                type="button"
+                id="add_account"
+                style="margin-top: 20px;"
+              >
+                ADD ACCOUNTS
+              </button>
+              <button
+                class="btn btn-outline-danger button-global"
+                type="button"
+                id="delete_all_account"
+                style="margin-top: 20px;"
+              >
+                DELETE ALL
+              </button>
+              <button
+                class="btn btn-outline-success button-global"
+                type="button"
+                id="import_account"
+                style="margin-top: 20px;"
+              >
+                IMPORT
+              </button>
+              <input type="file" id="accountImport" style="display: none;" />
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="card account-list-panel"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="profile-modals"></div>

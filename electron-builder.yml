@@ -1,0 +1,4 @@
+appId: com.example.ElectronAutoUpdate
+publish:
+  provider: gitlab
+  token: [YOUR GITHUB ACCESS TOKEN]

@@ -1,0 +1,89 @@
+<!-- The Edit Modal -->
+<div class="modal fade" id="editModal">
+  <div class="modal-dialog modal-md modal-dailog-centered" role="document">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">EDIT</h4>
+        <!-- <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button> -->
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <form class="form">
+              <div class="form-group">
+                <label for="linkChange">Link Change:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter A Link Here"
+                  id="linkChange"
+                />
+              </div>
+              <div class="form-group form-input">
+                <label for="region">Profile Change:</label>
+                <select
+                  class="form-control"
+                  id="profileChange"
+                  name="profileChange"
+                >
+                  <option value="">Select Profile</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="linkChange">Proxy Change:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter A Proxy Here"
+                  id="proxyChange"
+                />
+              </div>
+              <div class="form-group">
+                <label for="linkChange">Nike Account:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="USERNAME:PASSWORD"
+                  id="editNikeAccount"
+                />
+              </div>
+
+              <div class="form-group mt-30 text-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-danger button-global mr-20"
+                  data-dismiss="modal"
+                >
+                  BACK
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-success button-global"
+                  id="saveEditTask"
+                >
+                  SAVE
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-danger button-global"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div> -->
+    </div>
+  </div>
+</div>

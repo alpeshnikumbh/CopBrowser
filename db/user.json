@@ -1,0 +1,51 @@
+{
+  "user": [
+    {
+      "data": {
+        "key": "6XP-H6Q-HM9W",
+        "loggedin": false,
+        "text": "text",
+        "user_id": "649292632291541015",
+        "user_username": "CopBrowser",
+        "user_email": "borthdor@gmail.com",
+        "sub_id": null,
+        "error": false,
+        "error_message": "No error was found.",
+        "expired": false
+      },
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "date": "Wed, 19 Feb 2020 15:52:58 GMT",
+        "content-encoding": "br",
+        "cf-cache-status": "DYNAMIC",
+        "server": "cloudflare",
+        "x-powered-by": "Express",
+        "etag": "W/\"e5-nPRx73rXPVxUNUQ4ZhjHcb1DBVU\"",
+        "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "content-type": "application/json; charset=utf-8",
+        "status": "200",
+        "cf-ray": "567969348942dd93-SIN"
+      },
+      "config": {
+        "url": "https://copbrowser.com/authorize/login/6XP-H6Q-HM9W/text/",
+        "method": "post",
+        "headers": {
+          "Accept": "application/json, text/plain, */*"
+        },
+        "transformRequest": [
+          null
+        ],
+        "transformResponse": [
+          null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1
+      },
+      "request": {},
+      "id": 1582127579327
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta name="description" content="Cop Crawler" />
+
+      <link
+        rel="stylesheet"
+        href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      />
+
+      <link
+        rel="stylesheet"
+        href="../node_modules/font-awesome/css/font-awesome.min.css"
+      />
+
+      <link
+        rel="stylesheet"
+        href="./css/custom.css"
+      />
+      <link
+        rel="stylesheet"
+        href="./css/global.css"
+      />
+      <title>Cop Browser</title>
+    </head>
+
+  <body>
+    <div style="position: absolute;right: 0;top: 10px;">
+      <img
+        id="minimize"
+        class="action-icon"
+        src="./images/minimize.png"
+        alt="minimize"
+      />
+      <img
+        id="maximize"
+        class="action-icon"
+        src="./images/maximize.png"
+        style="display: none;"
+        alt="maximize"
+      />
+      <img id="close" class="action-icon" src="./images/close.png" alt="close" />
+    </div>
+
+    <div class="container">
+      <form class="form" id="activationForm" style="margin-top: 100px;">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-3 offset-md-3 offset-sm-3 text-center">
+            <img src="./images/logo.png" width="100px" />
+            <h4 class="text-center" style="color: white;">CopBrowser</h4>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-3 offset-md-3 offset-sm-3 text-center">
+            <div class="form-group">
+              <label class="active-status" style="display: none;">Invalid Key</label>
+              <input id="activateKey" style="text-align:center;" type="text" maxlength="12" class="form-control" placeholder="XXX-XXX-XXXX" />
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-3 offset-md-3 offset-sm-3 text-center">
+            <div class="form-group">
+              <button type="button" class="btn btn-outline-success button-global" id="checkActivate">
+                ACTIVATE
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <!-- Share Footer -->
+    <nav class="navbar navbar-footer-share navbar-dark bg-dark navbar-expand-md" style="background-color: #20202B !important;">
+      <div class="collapse navbar-collapse">
+        <div class="w-100">
+          <img src="./images/close.png" />
+          <span class="activated">Not Activated</span>
+        </div>
+        <div class="copyright" style="width: 135px;">
+          &copy; CopBrowser
+        </div>
+      </div>
+    </nav>
+    <!-- End Share Footer -->
+
+    <!-- Javascript -->
+    <script
+      src="./js/preJquery.js"
+    ></script>
+    <script src="./js/main.js"></script>
+    <!-- End Javascript -->
+  </body>
+</html>

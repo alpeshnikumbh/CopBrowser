@@ -1,0 +1,162 @@
+<div class="row" style="margin-top: 150px;">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <form style="margin-bottom:30px" class="form" id="settingsForm">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <h4>Browser Spoofer:</h4>
+          <div class="setting-panel">
+            <div class="form-group">
+              <div style="display: inline-flex;">
+                <span id="autoMinus"><i class="fa fa-minus"></i></span>
+                <input
+                  type="text"
+                  value=""
+                  id="settingId"
+                  style="display: none;"
+                />
+                <input
+                  type="text"
+                  class="form-control"
+                  value="0"
+                  id="taskInterval"
+                />
+                <span id="autoPlus"><i class="fa fa-plus"></i></span>
+                <span style="padding:6px;">Task Opening Interval</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="check-container"
+                >Automaticaly refresh 403 error
+                <input type="checkbox" id="browserAutoRefresh" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="check-container"
+                >Disable image loading
+                <input type="checkbox" id="browserDisableImage" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <h4>YeezySupply:</h4>
+          <div class="setting-panel">
+            <div class="form-group">
+              <label class="check-container"
+                >Stop proxy-banned tasks
+                <input type="checkbox" id="yazzyProxyBanned" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="check-container"
+                >Automaticaly refresh 403 error
+                <input type="checkbox" id="yazzyAutoRefresh" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="check-container"
+                >Disable image loading
+                <input type="checkbox" id="yazzyDisableImage" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <h4>Adidas:</h4>
+          <div class="setting-panel">
+            <div class="form-group">
+              <label for="site">Standard Region:</label>
+              <select
+                class="form-control"
+                id="adidasRegion"
+                name="adidasRegion"
+              >
+                <!-- <option value="" selected>Select Region</option> -->
+                <option value="us">United States</option>
+                <option value="at">Austria</option>
+                <option value="sg">Singapore</option>
+                <option value="fi">Finland</option>
+                <option value="ph">Philippines</option>
+                <option value="uk">United Kingdom</option>
+                <option value="de">Germany</option>
+                <option value="th">Thailand</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="check-container"
+                >Disable image loading
+                <input type="checkbox" id="adidasDisableImage" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="form-group form-input discord-webhook">
+            <label class="discord-label" for="discordWebhook">
+              <img src="./images/game.png" /> Discord Webhook:</label
+            >
+            <!-- <div id="discordWebhook" class="" style="border-color: #1dc4c4;">
+              <div class="msg">-</div>
+              <div class="pid">PID</div>
+              <div class="pid-value">-</div>
+              <div class="site">Site</div>
+              <div class="site-value">-</div>
+              <div class="discord-footer">
+                <img class="discord-img" src="./images/game.png" />
+                <div class="today-date">CopBrowser | DD.MM.YYYY</div>
+              </div>
+            </div> -->
+            <input
+              type="text"
+              placeholder="Discord Webhook"
+              id="discordWebhook"
+              class="form-control"
+            />
+            <button
+              class="btn btn-outline-success button-global"
+              type="button"
+              id="testWebhookURL"
+              style="margin-left: 20px;"
+            >
+              TEST
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          style="margin-top: 50px;"
+          class="col-lg-4 col-md-4 col-sm-4 offset-lg-4 offset-md-4 offset-sm-4 text-center"
+        >
+          <button
+            class="btn btn-outline-success button-global"
+            type="button"
+            id="saveAllSettings"
+            style="margin-right: 20px;"
+          >
+            SAVE ALL
+          </button>
+          <button
+            class="btn btn-outline-danger button-global"
+            type="button"
+            id="logout_app"
+          >
+            LOGOUT
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

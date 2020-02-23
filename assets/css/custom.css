@@ -1,0 +1,1241 @@
+/* Body */
+@font-face {
+  font-family: robotoCustom;
+  src: url(./Roboto-Medium.ttf);
+}
+
+body {
+  font-family: robotoCustom;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #e2e1e0;
+  height: 100%;
+  width: 100%;
+
+  /* For Selection */
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* For Draggable */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.blue {
+  color: #1dc4c4;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.green {
+  color: #00ff0b;
+}
+
+a {
+  outline: none;
+}
+
+a img {
+  outline: none;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495e;
+}
+
+.bordered {
+  border: 2px solid #ddd;
+  padding: 0px 20px;
+}
+
+.error {
+  color: red;
+}
+
+/* Snackbar or Toast CSS */
+/* The toast - position it at the bottom and in the middle of the screen */
+.toast {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 2; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 80px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.toast.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 80px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 80px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+#toggleButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.task-action {
+  cursor: pointer;
+}
+
+.closed {
+  color: red;
+}
+
+.open {
+  color: green;
+}
+
+/* consolepanel textarea css */
+.content {
+  margin-top: 85px;
+}
+
+/*
+ * 1. Set position
+ * 2. Set dimension
+ * 3. Style
+ */
+.title-bar {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  display: inline-block;
+  color: #ffffff;
+  line-height: 40px;
+  font-weight: 600;
+  background-color: #242424;
+}
+
+.tool-bar {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #242424;
+}
+
+.tool-bar ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tool-bar ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.tool-bar ul li a {
+  padding: 0px 6px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.tool-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Important part */
+.modal-dialog {
+  overflow-y: initial !important;
+}
+.modal-body {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 10px;
+}
+
+body {
+  background-color: #161620;
+}
+
+.logo {
+  width: 62px;
+  height: 50px;
+}
+
+#navbar-header {
+  height: 100%;
+}
+
+.nav-link.active {
+  border-bottom: 0px;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: #161620;
+}
+
+.header-name {
+  font-size: medium;
+  margin-left: -15px;
+}
+
+.navbar-nav {
+  margin-left: 160px;
+  text-align: center;
+}
+
+#profilePanel .nav-item,
+#proxyPanel .nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#taskPanel .nav-item {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#taskPanel .nav-link,
+#profilePanel .nav-link,
+#proxyPanel .nav-link {
+  padding-bottom: 0px;
+}
+
+#taskPanel .nav-link div,
+#profilePanel .nav-link div,
+#proxyPanel .nav-link div {
+  padding-bottom: 10px;
+}
+
+.nav-item.active {
+  border-bottom: 0px solid #1dc4c4;
+}
+
+.navbar-tab {
+  border-bottom: 3px solid #1dc4c4;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.w-70 {
+  width: 70% !important;
+  height: 100% !important;
+}
+
+.discord-img {
+  width: 10px;
+  height: 10px;
+}
+
+.w-70-center {
+  width: 70vw !important;
+  height: 100% !important;
+  margin: auto;
+  display: inline-flex;
+  text-align: center;
+}
+
+.action-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#navbar-header > .navbar-nav > .nav-item > .nav-link {
+  height: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Table */
+.tab-pane {
+  margin-top: 10px;
+}
+
+.tab-pane > table > tbody::before {
+  content: "";
+  display: table-row;
+  height: 20px;
+}
+
+.tab-pane > table > thead > tr,
+.tab-pane > table > tbody > tr {
+  color: white;
+  text-align: center;
+  background-color: #20202b !important;
+}
+
+.tab-pane > table > thead > tr > th:first-child {
+  border-radius: 15px 0 0 15px !important;
+}
+
+.tab-pane > table > thead > tr > th:last-child {
+  border-radius: 0 15px 15px 0 !important;
+}
+
+.tab-pane > table > tbody > tr > td:first-child {
+  border-radius: 15px 0 0 15px !important;
+}
+
+.tab-pane > table > tbody > tr > td:last-child {
+  border-radius: 0 15px 15px 0 !important;
+}
+
+tbody {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.option-tab {
+  background-color: #20202b !important;
+  border-radius: 15px;
+}
+
+.option-tab > .nav-item > .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-center {
+  text-align: center;
+}
+
+.nav-center ul.nav {
+  display: inline-block;
+}
+
+.nav-center ul.nav li {
+  display: inline;
+}
+
+.card {
+  border: 0px;
+  padding-right: 10px;
+  background-color: #161620;
+}
+
+.card-header {
+  margin-top: 15px;
+  padding: 5px 10px 5px 0px;
+  margin-bottom: 20px;
+  background-color: #20202b !important;
+  border-radius: 15px !important;
+  color: white;
+  border: 0px;
+}
+
+.card-body {
+  margin-top: 10px;
+  padding: 10px 0px 10px 0px;
+  background-color: #20202b !important;
+  border-radius: 15px;
+  color: white;
+  border: 0px;
+}
+
+.col-lg-1,
+.col-lg-2,
+.col-lg-3 {
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.task-img > img {
+  width: 50px;
+  height: 50px;
+  margin: -10px;
+}
+
+.task-list-panel {
+  height: 390px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/*
+ *  STYLE 1
+ */
+
+.task-list-panel::-webkit-scrollbar-track {
+  background-color: #161620;
+}
+
+.task-list-panel::-webkit-scrollbar {
+  width: 12px;
+  background-color: #20202b;
+}
+
+.task-list-panel::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: #20202b;
+}
+
+.force-overflow {
+  min-height: 450px;
+}
+
+.task-list-panel i {
+  margin-left: 5px;
+}
+
+.button-global {
+  color: white;
+  border-width: 4px;
+}
+
+.fixed-bottom-30 {
+  top: unset;
+  bottom: 30px !important;
+}
+
+#navbar-footer button {
+  color: white;
+  width: 140px;
+  border-radius: 12px;
+}
+
+#navbar-footer > ul > li {
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-footer-share {
+  top: unset;
+  bottom: 0px;
+  height: 30px;
+  background-color: #161620;
+}
+
+.navbar-footer-share .w-100 {
+  margin-left: 10px !important;
+  width: 100%;
+  height: 20px;
+}
+
+.navbar-footer-share img {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.share-button img:nth-child(1) {
+  width: 18px;
+  height: 16px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.share-button img:nth-child(2) {
+  width: 20px;
+  height: 22px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.activated {
+  margin-top: -2px;
+  color: white;
+  margin-left: 5px;
+  position: absolute;
+}
+
+.share-button {
+  width: 100%;
+}
+
+.copyright {
+  width: 240px;
+  color: white;
+}
+.nav-brand {
+  -webkit-app-region: drag;
+  cursor: move;
+}
+
+.hide-ele {
+  display: none;
+}
+
+.nav-background {
+  background-color: #20202b !important;
+}
+
+.body-background {
+  background-color: #161620 !important;
+}
+
+/* Create Tasks Form CSS*/
+#createTasksForm {
+  color: white;
+}
+
+#createTasksForm input,
+#createTasksForm select {
+  background-color: #161620;
+  color: white;
+  border: 1px solid #161620;
+}
+
+#createTasksForm .row {
+  margin-bottom: 20px;
+}
+
+#createTasksForm .form-input,
+.discord-webhook {
+  padding: 10px;
+  background-color: #20202b !important;
+  display: inline-flex;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#createTasksForm label {
+  padding-top: 7px;
+  padding-right: 15px;
+}
+
+#createTasksForm .col-lg-4 {
+  padding: 0px 40px 0px 40px;
+}
+
+#createTasksForm #amount {
+  text-align: center;
+}
+
+#createTasksForm .fa {
+  font-size: 20px;
+}
+
+/* headless of head switch */
+/* The switch - the box around the slider */
+#createTasksForm .switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+#createTasksForm .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#createTasksForm > .slider-parent > label {
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* The slider */
+#createTasksForm .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1dc4c4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#createTasksForm .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #212529;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#createTasksForm input:checked + .slider {
+  background-color: #00ff0b;
+}
+
+#createTasksForm input:focus + .slider {
+  box-shadow: 0 0 1px #00ff0b;
+}
+
+#createTasksForm input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+#createTasksForm .slider.round {
+  border-radius: 20px;
+}
+
+#createTasksForm .slider.round:before {
+  border-radius: 50%;
+}
+
+.toogle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+/* Proxies Panel */
+.proxy_panel_buttons {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  text-align: right;
+}
+
+.proxy_panel_buttons button {
+  width: 150px;
+}
+
+.proxy-list-panel {
+  height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-right: 0px;
+  background-color: #20202b;
+  padding-left: 15px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.proxy-label {
+  flex: 0 0 auto;
+  margin: 0px;
+}
+
+/*
+ *  Proxy List Panel Scrollbar
+ */
+
+.proxy-list-panel::-webkit-scrollbar-track {
+  background-color: #20202b;
+  border-radius: 0 10px 10px 0;
+}
+
+.proxy-list-panel::-webkit-scrollbar {
+  width: 7px;
+  background-color: #161620;
+}
+
+.proxy-list-panel::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #1dc4c4;
+}
+
+/* Profile Tab CSS*/
+#createProfileForm,
+#updateProfileForm {
+  background-color: #20202b;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  /* height: 500px;
+  overflow-y: auto; */
+}
+
+#updateProfileForm {
+  border-radius: 0px 10px 10px 0px;
+  background-color: #20202b96;
+}
+
+#createProfileForm input,
+#updateProfileForm input {
+  background-color: #161620;
+  border: 0px;
+}
+
+.create-profile-header {
+  border: 1px solid #161620;
+  background-color: #161620;
+  padding: 0px 35px 0px 35px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.create-profile-header span {
+  font-size: 18px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.create-profile-header img {
+  width: 45px;
+  height: 40px;
+}
+
+/* Scrollbar For Create Profile Form*/
+#createProfileForm::-webkit-scrollbar-track {
+  background-color: #20202b;
+  border-radius: 0 15px 15px 0;
+}
+
+#createProfileForm::-webkit-scrollbar {
+  width: 7px;
+  background-color: #161620;
+}
+
+#createProfileForm::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #1dc4c4;
+}
+
+.profiles-panel {
+  border-radius: 10px;
+  width: 230px;
+  padding-right: 0px;
+}
+
+.profiles-panel .card-header {
+  margin-bottom: 0px;
+  border-radius: 10px 0px 0px !important;
+}
+
+.profiles-panel .card-body {
+  margin-top: 0px;
+  border-radius: 0px !important;
+}
+
+.profiles-panel .create-profile-header img {
+  width: 35px;
+  height: 30px;
+}
+
+.profiles-panel .create-profile-header {
+  margin-top: 10px;
+}
+
+.profiles-panel-records-parent {
+  height: 330px;
+  overflow-y: auto;
+}
+.profile-panel-color {
+  background-color: #20202b;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.import-export-panel {
+  padding-top: 10px;
+}
+
+.profiles-panel-records .card-body {
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.btn-outline-primary {
+  border-radius: 8px;
+  border: 4px solid #1dc4c4 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1dc4c4 !important;
+}
+
+.btn-outline-danger {
+  border-radius: 8px;
+  border: 4px solid #ff0000 !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff0000 !important;
+}
+
+.btn-outline-success {
+  border-radius: 8px;
+  border: 4px solid #00ff0b !important;
+}
+
+.btn-outline-success:hover {
+  background-color: #00ff0b !important;
+}
+
+.profiles-panel-records .card-body.selected {
+  background-color: #20202b96 !important;
+  border-right: 4px solid #1dc4c4;
+}
+
+.profiles-panel .profiles-panel-records {
+  padding-right: 0px;
+}
+
+/* Scrollbar For profiles panel*/
+.profiles-panel-records-parent::-webkit-scrollbar-track {
+  background-color: #20202b;
+}
+
+.profiles-panel-records-parent::-webkit-scrollbar {
+  width: 5px;
+  background-color: #161620;
+}
+
+.profiles-panel-records-parent::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #1dc4c4;
+}
+
+/* Profile Nike Panel*/
+.profile_panel_nike_buttons {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  text-align: right;
+}
+
+.profile_panel_nike_buttons button {
+  width: 165px;
+}
+
+.account-list-panel {
+  height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-right: 0px;
+  padding: 15px;
+  background-color: #20202b;
+  padding-left: 15px !important;
+  border-radius: 20px;
+}
+
+.proxy-field,
+.account-field {
+  flex: 0 0 auto;
+  margin: 0px;
+}
+
+/*
+ *  Nike Account List Panel Scrollbar
+ */
+
+.account-list-panel::-webkit-scrollbar-track {
+  background-color: #20202b;
+  border-radius: 0 10px 10px 0;
+}
+
+.account-list-panel::-webkit-scrollbar {
+  width: 7px;
+  background-color: #161620;
+}
+
+.account-list-panel::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #1dc4c4;
+}
+
+.nike-account-label {
+  flex: 0 0 auto;
+  margin: 0px;
+}
+
+/* Settings Panel Form */
+#settingsForm {
+  color: white;
+}
+
+.setting-panel {
+  margin-top: 20px;
+  background-color: #20202b;
+  border-radius: 10px;
+  padding: 20px;
+  height: 150px;
+}
+
+.setting-panel .form-group label {
+  vertical-align: middle;
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+#autoPlus,
+#autoMinus,
+#accountPlus,
+#accountMinus {
+  padding: 7px;
+  background-color: #161620;
+  color: #28a745;
+  cursor: pointer;
+  height: 38px;
+}
+
+#accountPlus,
+#accountMinus {
+  padding-top: 10px;
+}
+
+#autoMinus {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#autoPlus {
+  border-radius: 0px 10px 10px 0px;
+}
+
+#taskInterval {
+  text-align: center;
+  width: 70px;
+  border-radius: 0px !important;
+  background-color: #161620;
+  border: 1px solid #161620;
+  user-select: none;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #20202b;
+  border: 2px solid #161620;
+  border-radius: 5px;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.check-container .checkmark::after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #28a745;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#adidasRegion {
+  background: #161620;
+  border: none;
+  width: 220px;
+  border-radius: 15px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.discord-webhook label {
+  width: 300px;
+  padding-top: 7px;
+  padding-right: 15px;
+}
+
+.discord-webhook select,
+.discord-webhook input {
+  background-color: #161620 !important;
+  color: white;
+  border: 1px solid #161620 !important;
+}
+
+.discord-webhook img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Snackbar or Toast CSS */
+/* The toast - position it at the bottom and in the middle of the screen */
+#toast {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  font-weight: bolder;
+  text-align: center; /* Centered text */
+  border: 2px solid #1dc4c4;
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 80px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#toast.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 80px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 80px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+#discordWebhook {
+  border-left: 3px solid;
+  padding-left: 10px;
+}
+
+.discord-label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+}
+
+.discord-footer {
+  display: inline-flex;
+}
+
+.discord-footer .today-date {
+  margin-left: 10px;
+}
+
+/** Page Loader */
+.overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #161620;
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: inline-block;
+  cursor: not-allowed;
+}
+
+.overlay__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-top-color: #28a745;
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+.spinner-logo {
+  position: relative;
+  width: 70px;
+  border-radius: 50%;
+  top: 25%;
+  left: 38%;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#tasks .col-lg-3 {
+  flex: 0 0 20% !important;
+  max-width: 20% !important;
+}
+
+#tasks .task-status {
+  flex: 0 0 15.333333% !important;
+  max-width: 15.333333% !important;
+  font-weight: bold;
+}
+
+#tasks .config-action {
+  flex: 0 0 12.333333% !important;
+  max-width: 12.333333% !important;
+}
+
+.total-task {
+  font-size: 23px;
+  color: white;
+  margin: 10px 10px;
+  position: absolute;
+}
+
+.site-url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .site-url:hover {
+  overflow: visible;
+} */

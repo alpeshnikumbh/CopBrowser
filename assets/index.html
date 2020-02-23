@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" href="./images/logo.png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="CopBrowser" />
+
+      <link
+        rel="stylesheet"
+        href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      />
+
+      <link
+        rel="stylesheet"
+        href="../node_modules/font-awesome/css/font-awesome.min.css"
+      />
+
+      <link
+        rel="stylesheet"
+        href="./css/custom.css"
+      />
+      <link
+        rel="stylesheet"
+        href="./css/global.css"
+      />
+      <title>Cop Browser</title>
+    </head>
+
+  <body>
+    <!-- Navbar -->
+    <!-- <nav style="-webkit-app-region: drag" class="navbar navbar-dark bg-dark navbar-expand-md"> -->
+    <nav class="navbar navbar-header navbar-dark bg-dark navbar-expand-md" style="background-color: #20202b !important;">
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="container">
+      <!-- Dark overlay -->
+
+      <!-- Tasks -->
+      <div id="tasks" class="content"></div>
+
+      <!-- CreateTask -->
+      <div id="createTasks" class="content"></div>
+
+      <!-- Proxies -->
+      <div id="proxies" class="content"></div>
+
+      <!-- Profiles -->
+      <div id="profiles" class="content"></div>
+
+      <!-- Settings -->
+      <div id="settings" class="content"></div>
+      
+    </div>
+
+    <!-- Toast For Messages -->
+    <div id="toast"></div>
+    
+    <!-- End wrapper -->
+
+    <!-- Footer -->
+      <nav class="navbar navbar-footer navbar-dark bg-dark navbar-expand-md fixed-bottom-30" style="background-color: #20202b !important;">
+      </nav>
+    <!-- End Footer -->
+
+    <!-- Share Footer -->
+    <nav class="navbar navbar-footer-share navbar-dark bg-dark navbar-expand-md" >
+      <div class="collapse navbar-collapse">
+        <div class="w-100">
+          <img src="./images/maximize.png" />
+          <span class="activated">Activated</span>
+        </div>
+        <div class="share-button">
+          <img src="./images/twitter.png" />
+          <img src="./images/game.png" />
+        </div>
+        <div class="copyright">
+          &copy; CopBrowser
+        </div>
+      </div>
+    </nav>
+    <!-- End Share Footer -->
+    
+    <div class="overlay">
+      <div class="overlay__content">
+        <span class="spinner"></span>
+      </div>
+    </div>
+    
+    <!-- Javascript -->
+    <script
+      src="./js/preJquery.js"
+    ></script>
+    <script src="./js/main.js"></script>
+    <!-- End Javascript -->
+  </body>
+</html>

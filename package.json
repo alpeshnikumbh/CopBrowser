@@ -1,0 +1,84 @@
+{
+  "name": "cop_browser",
+  "version": "1.0.0",
+  "description": "Copbrowser is task manager application for all shopify sites",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build-gulp": "node ./gulp-build.js",
+    "uglifyjs": "uglifyjs ./assets/js/main.js --compress --mangle",
+    "build-asar": "asar pack ./assets app.asar",
+    "build-win": "electron-packager ./ --platform=win32 --arch=x64 --overwrite --prune --icon=./build/icon.ico CopBrowser",
+    "build-win-admin": "electron-packager ./ --platform=win32 --arch=x64 --win32metadata.requested-execution-level=requireAdministrator --overwrite --icon=./build/icon.ico CopBrowser",
+    "package-win": "node ./build_installer.js",
+    "installer-win": "node ./electron-installer.js",
+    "build-mac": "electron-packager . --icon=./build/icon.icns CopBrowser",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mw"
+  },
+  "build": {
+    "appId": "com.copbrowser.app",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://gitlab.com"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "verifyUpdateCodeSignature": false
+    },
+    "mac": {
+      "category": "public.cop-browser.productivity",
+      "identity": "Mac Developer: username (alpeshnikumbh786@gmail.com)",
+      "target": [
+        "dmg"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
+  "author": "copbrowser@2020",
+  "license": "ISC",
+  "dependencies": {
+    "asar": "^2.0.3",
+    "axios": "^0.19.1",
+    "bootstrap": "^4.4.1",
+    "csvtojson": "^2.0.10",
+    "discord.js": "^11.5.1",
+    "electron-db": "^0.15.2",
+    "electron-log": "^4.0.6",
+    "electron-updater": "^4.2.0",
+    "events": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "fs": "0.0.1-security",
+    "jquery": "^3.4.1",
+    "json-csv": "^3.0.1",
+    "moment": "^2.24.0",
+    "node-excel-export": "^1.4.4",
+    "path": "^0.12.7",
+    "popper.js": "^1.16.0",
+    "puppeteer": "^1.20.0",
+    "puppeteer-extra": "^3.1.7",
+    "puppeteer-extra-plugin-stealth": "^2.4.9",
+    "random": "^2.1.1",
+    "read-excel-file": "^4.0.5",
+    "request-promise": "^4.2.5",
+    "update-electron-app": "^1.5.0",
+    "uuid": "^3.4.0",
+    "webhook-discord": "^3.5.1"
+  },
+  "devDependencies": {
+    "electron": "^6.0.11",
+    "electron-builder": "^22.3.2",
+    "electron-packager": "^14.2.0",
+    "electron-winstaller": "^4.0.0",
+    "electron-wix-msi": "^2.2.0",
+    "request-promise-native": "^1.0.8"
+  }
+}

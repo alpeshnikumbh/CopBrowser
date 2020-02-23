@@ -1,0 +1,183 @@
+<div class="row" style="margin-top: 100px;">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <form class="form" id="createTasksForm">
+      <h4 style="margin-bottom:30px">Create Task:</h4>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <h5>General:</h5>
+          <div class="form-group form-input">
+            <label for="site">Site:</label>
+            <select class="form-control" id="site" name="site">
+              <option value="Browser Spoofer">Browser Spoofer</option>
+              <option value="Yeezy Supply">Yeezy Supply</option>
+              <option value="Adidas">Adidas</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <h5>Other:</h5>
+          <div class="form-group form-input">
+            <label for="profile">Profile:</label>
+            <select class="form-control" id="profile" name="profile" disabled>
+              <option value="" selected>Select Profile</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4" style="margin-top: 32px;">
+          <div class="form-group" style="padding: 10px;width: 250px;">
+            <label
+              for="profile_autofill"
+              style="padding: 0px 17px 0px 0px;width: 160px;"
+              >Use Autofill/Profile:</label
+            >
+            <label class="switch" style="padding: 2px 12px;">
+              <input id="profile_autofill" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group form-input">
+            <label for="url">URL:</label>
+            <input
+              type="text"
+              placeholder="Enter a Link, e.g: google.com"
+              id="url"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group form-input">
+            <label for="proxy_pool" style="width: 155px;">Proxy Pool:</label>
+            <!-- <input
+              type="text"
+              placeholder="Select proxy pool"
+              id="proxy_pool"
+              class="form-control"
+            /> -->
+            <select
+              class="form-control"
+              id="proxy_pool"
+              name="proxy_pool"
+              disabled
+            >
+              <option value="" selected>Select Proxy Pool</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group" style="padding: 10px;width: 250px;">
+            <label
+              for="use_proxy_pool"
+              style="padding: 0px 17px 0px 0px;width: 160px;"
+              >Use a Proxy Pool:</label
+            >
+            <label class="switch" style="padding: 2px 12px;">
+              <input id="use_proxy_pool" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group form-input">
+            <label for="region">Region:</label>
+            <select class="form-control" id="region" name="region" disabled>
+              <option value="">Select Region, Adidas Only</option>
+              <option value="us">United States</option>
+              <option value="at">Austria</option>
+              <option value="sg">Singapore</option>
+              <option value="fi">Finland</option>
+              <option value="ph">Philippines</option>
+              <option value="uk">United Kingdom</option>
+              <option value="de">Germany</option>
+              <option value="th">Thailand</option>
+              <option value="ca">Canada</option>
+              <option value="au">Australia</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group form-input">
+            <label for="proxy">Proxy:</label>
+            <input
+              type="text"
+              s
+              placeholder="IP:PORT/IP:PORT:USER:PASS"
+              id="proxy"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group" style="padding: 10px;width: 250px;">
+            <label
+              for="run_localhost"
+              style="padding: 0px 17px 0px 0px;width: 160px;"
+              >Run Localhost:</label
+            >
+            <label class="switch" style="padding: 2px 12px;">
+              <input id="run_localhost" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group form-input">
+            <div style="display: inline-flex;">
+              <label for="amount">Amount:</label>
+              <span id="accountMinus"><i class="fa fa-minus"></i></span>
+              <input type="hidden" value="[]" id="allFetchedProxy" />
+              <input type="text" class="form-control" value="1" id="amount" />
+              <span id="accountPlus"><i class="fa fa-plus"></i></span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 col-md-4 col-sm-4 offset-lg-4 offset-md-4 offset-sm-4"
+        >
+          <div class="form-group" style="padding: 10px;width: 250px;">
+            <label
+              for="use_nike_account"
+              style="padding: 0px 17px 0px 0px;width: 160px;"
+              >Use Nike Account:</label
+            >
+            <label class="switch" style="padding: 2px 12px;">
+              <input id="use_nike_account" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          style="margin-top: 20px;"
+          class="col-lg-4 col-md-4 col-sm-4 offset-lg-4 offset-md-4 offset-sm-4 text-center"
+        >
+          <button
+            class="btn btn-outline-success button-global"
+            type="button"
+            id="saveCreateTask"
+            style="margin-right: 20px;"
+          >
+            CREATE
+          </button>
+          <button
+            class="btn btn-outline-danger button-global"
+            type="button"
+            id="clearTaskForm"
+          >
+            CLEAR
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

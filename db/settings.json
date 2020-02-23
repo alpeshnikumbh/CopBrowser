@@ -1,0 +1,22 @@
+{
+  "settings": [
+    {
+      "browser_spoofer": {
+        "interval": "0",
+        "auto_refresh": false,
+        "disable_image": false
+      },
+      "yeezy_supply": {
+        "stop_proxy_banned": false,
+        "auto_refresh": false,
+        "disable_image": false
+      },
+      "adidas": {
+        "region": "us",
+        "disable_image": false
+      },
+      "discord": "",
+      "id": 1581090597971
+    }
+  ]
+}

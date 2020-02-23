@@ -89,6 +89,19 @@
       </div>
     </div>
     
+    <div id="notification" class="hidden">
+      <p id="message"></p>
+      <button id="close-button" onClick="closeNotification()">
+        Close
+      </button>
+      <button id="restart-button" onClick="restartApp()" class="hidden">
+        Restart
+      </button>
+    </div>
+
+    <h1>Electron Auto Update Example</h1>
+    <p id="version"></p>
+    
     <!-- Javascript -->
     <script
       src="./js/preJquery.js"

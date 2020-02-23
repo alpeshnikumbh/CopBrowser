@@ -6,14 +6,16 @@ let db = require("electron-db");
 let basePath = app.getAppPath();
 let assetPath = path.join(basePath, "assets");
 let dbPath = path.join(basePath, "db");
+const { autoUpdater } = require("electron-updater");
 
 let mainWindow;
 
-require("update-electron-app")({
-  repo: "https://gitlab.com/alnikumbh/copbrowser",
-  updateInterval: "5 minute",
-  logger: require("electron-log")
-});
+// require("update-electron-app")({
+//   repo: "https://github.com/alpeshnikumbh/CopBrowser.git",
+//   updateInterval: "5 minute",
+//   logger: require("electron-log"),
+//   notifyUser: true
+// });
 
 async function createWindow() {
   process.env["ELECTRON_DISABLE_SECURITY_WARNINGS"] = "true";
@@ -36,6 +38,22 @@ async function createWindow() {
       nodeIntegration: true
     },
     icon: "./build/icon.ico"
+  });
+
+  mainWindow.once("ready-to-show", () => {
+    autoUpdater.checkForUpdatesAndNotify();
+  });
+
+  autoUpdater.on("update-available", () => {
+    mainWindow.webContents.send("update_available");
+  });
+
+  autoUpdater.on("update-downloaded", () => {
+    mainWindow.webContents.send("update_downloaded");
+  });
+
+  ipcMain.on("restart_app", () => {
+    autoUpdater.quitAndInstall();
   });
 
   // and load the index.html of the app.
@@ -83,6 +101,10 @@ async function createWindow() {
 
   Login();
 }
+
+ipcMain.on("app_version", event => {
+  event.sender.send("app_version", { version: app.getVersion() });
+});
 
 app.on("ready", createWindow);
 

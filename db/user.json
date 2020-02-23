@@ -16,7 +16,7 @@
       "status": 200,
       "statusText": "",
       "headers": {
-        "date": "Wed, 19 Feb 2020 15:52:58 GMT",
+        "date": "Sun, 23 Feb 2020 11:03:32 GMT",
         "content-encoding": "br",
         "cf-cache-status": "DYNAMIC",
         "server": "cloudflare",
@@ -25,7 +25,7 @@
         "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
         "content-type": "application/json; charset=utf-8",
         "status": "200",
-        "cf-ray": "567969348942dd93-SIN"
+        "cf-ray": "5698b6babeebdd7f-SIN"
       },
       "config": {
         "url": "https://copbrowser.com/authorize/login/6XP-H6Q-HM9W/text/",
@@ -45,7 +45,7 @@
         "maxContentLength": -1
       },
       "request": {},
-      "id": 1582127579327
+      "id": 1582455812780
     }
   ]
 }

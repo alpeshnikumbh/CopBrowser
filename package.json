@@ -5,43 +5,23 @@
   "main": "app.js",
   "scripts": {
     "start": "electron .",
-    "build-gulp": "node ./gulp-build.js",
-    "uglifyjs": "uglifyjs ./assets/js/main.js --compress --mangle",
     "build-asar": "asar pack ./assets app.asar",
     "build-win": "electron-packager ./ --platform=win32 --arch=x64 --overwrite --prune --icon=./build/icon.ico CopBrowser",
     "build-win-admin": "electron-packager ./ --platform=win32 --arch=x64 --win32metadata.requested-execution-level=requireAdministrator --overwrite --icon=./build/icon.ico CopBrowser",
-    "package-win": "node ./build_installer.js",
-    "installer-win": "node ./electron-installer.js",
     "build-mac": "electron-packager . --icon=./build/icon.icns CopBrowser",
-    "pack": "electron-builder --dir",
+    "pack": "electron-builder -p always",
     "dist": "electron-builder -mw"
   },
   "build": {
-    "appId": "com.copbrowser.app",
-    "publish": [
-      {
-        "provider": "generic",
-        "url": "https://gitlab.com"
-      }
-    ],
     "win": {
-      "target": [
-        "nsis"
-      ],
-      "verifyUpdateCodeSignature": false
-    },
-    "mac": {
-      "category": "public.cop-browser.productivity",
-      "identity": "Mac Developer: username (alpeshnikumbh786@gmail.com)",
-      "target": [
-        "dmg"
-      ]
-    },
-    "linux": {
-      "target": [
-        "AppImage"
+      "publish": [
+        "github"
       ]
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alpeshnikumbh/CopBrowser.git"
   },
   "author": "copbrowser@2020",
   "license": "ISC",

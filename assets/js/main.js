@@ -66,6 +66,10 @@ const toast = msg => {
   }, 2000);
 };
 
+const newDate = () => {
+  return momment().format("YYYY-MM-DD");
+};
+
 const getDatabaseDates = (obj, id) => {
   obj["created_at"] = newDate();
   obj["updated_at"] = null;

@@ -10,9 +10,10 @@ let dbPath = path.join(basePath, "db");
 let mainWindow;
 
 require("update-electron-app")({
-  repo: "https://gitlab.com/alnikumbh/copbrowser",
-  updateInterval: "5 minute",
-  logger: require("electron-log")
+  repo: "https://github.com/alpeshnikumbh/CopBrowser.git",
+  updateInterval: "1 day",
+  logger: require("electron-log"),
+  notifyUser: true
 });
 
 async function createWindow() {

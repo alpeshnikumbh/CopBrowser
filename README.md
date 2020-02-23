@@ -1,2 +1,2 @@
 # CopBrowser
-Task Manager For Shopify Sites FOr Auto Purchase
+Task Manager For Shopify Sites For Auto Purchase
